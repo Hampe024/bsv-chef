@@ -114,7 +114,7 @@ from src.controllers.receipecontroller import ReceipeController
         )
     ]
 )
-@patch('src.controllers.receipecontroller.ReceipeController.__init__')
+@patch('src.controllers.receipecontroller.calculate_readiness')
 @pytest.mark.unit
 def test_get_receipe_readiness(available_items, diet, expected_result, mocked_calculate):
     
